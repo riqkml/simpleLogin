@@ -11,7 +11,7 @@ export default class splashScreen extends Component {
   }
   _route() {
     setTimeout(() => {
-      this.props.navigation.navigate("Login");
+      this.props.navigation.replace("Login");
     }, 2000);
   }
   render() {
