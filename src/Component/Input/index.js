@@ -14,7 +14,7 @@ export default class Input extends Component {
 
   render() {
     const { isLook, border } = this.state;
-    const { icon, sizeIcon, label, isBorder, isPassword } = this.props;
+    const { icon, sizeIcon, label, isBorder, isPassword, secure } = this.props;
     const onFocusForm = () => {
       this.setState({
         border: "blue",
@@ -36,7 +36,7 @@ export default class Input extends Component {
               placeholder={label}
               onBlur={onBlurForm}
               onFocus={onFocusForm}
-              secureTextEntry={isLook}
+              secureTextEntry={secure && isLook}
               style={styles.textInput}
             />
           </View>
